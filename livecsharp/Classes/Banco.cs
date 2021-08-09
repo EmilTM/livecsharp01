@@ -11,7 +11,7 @@ namespace livecsharp.Classes
         public static MySqlCommand Abrir()
         {
             MySqlCommand cmd = new MySqlCommand();
-            string strCon = @"server=127.0.0.1;database=liveescoladb;user id=root;password=";
+            string strCon = @"Data Source=127.0.0.1;Database=liveescoladb;username=root;;SSL Mode=0;password=";
             MySqlConnection cn = new MySqlConnection(strCon);
             cn.Open();
             cmd.Connection = cn;

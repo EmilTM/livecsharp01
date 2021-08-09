@@ -47,6 +47,7 @@ namespace livecsharp
             this.chkVisualizar = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lstLista = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +81,7 @@ namespace livecsharp
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // label1
             // 
@@ -107,7 +109,8 @@ namespace livecsharp
             // 
             this.txtId.Location = new System.Drawing.Point(200, 85);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(372, 26);
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(90, 26);
             this.txtId.TabIndex = 5;
             this.txtId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -180,6 +183,7 @@ namespace livecsharp
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Enabled = false;
             this.chkAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAtivo.Location = new System.Drawing.Point(610, 88);
             this.chkAtivo.Name = "chkAtivo";
@@ -229,11 +233,21 @@ namespace livecsharp
             this.textBox1.UseSystemPasswordChar = true;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
+            // lstLista
+            // 
+            this.lstLista.FormattingEnabled = true;
+            this.lstLista.ItemHeight = 20;
+            this.lstLista.Location = new System.Drawing.Point(754, 385);
+            this.lstLista.Name = "lstLista";
+            this.lstLista.Size = new System.Drawing.Size(490, 204);
+            this.lstLista.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 728);
+            this.Controls.Add(this.lstLista);
             this.Controls.Add(this.chkVisualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chkAtivo);
@@ -280,6 +294,7 @@ namespace livecsharp
         private System.Windows.Forms.CheckBox chkVisualizar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox lstLista;
     }
 }
 
